@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid } from '@mui/material';
 import IndicatorUI from './components/IndicatorUI';
 import DataFetcher from './functions/DataFetcher';

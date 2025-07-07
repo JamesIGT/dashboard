@@ -30,6 +30,7 @@ export interface Current {
   wind_speed_10m: number;
   rain: number;
   precipitation: number;
+  apparent_temperature: number;
 }
 
 export interface Currentunits {
