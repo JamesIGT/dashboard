@@ -5,7 +5,6 @@ import TableUI from './components/TableUI';
 import ChartUI from './components/ChartUI';
 import HeaderUI from './components/HeaderUI';
 import AlertUI from './components/AlertUI';
-import SelectorUI from './components/SelectorUI';
 import IndicatorUI from './components/IndicatorUI';
 import useDataFetcher from './functions/DataFetcher';
 
@@ -18,7 +17,6 @@ import {
   ThemeProvider,
   Typography,
   createTheme,
-  Toolbar,
 } from '@mui/material';
 
 const darkTheme = createTheme({
