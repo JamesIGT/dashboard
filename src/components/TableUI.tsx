@@ -23,7 +23,6 @@ export default function TemperaturaTableUI({ dataFetcherOutput }: TableUIProps) 
   if (error) return <Typography>Error: {error}</Typography>;
   if (!data) return <Typography>No hay datos disponibles.</Typography>;
 
-  // Agrupar temperaturas por día
   const tempsPorDia: { [fecha: string]: number[] } = {};
 
   data.hourly.time.forEach((fechaHora, i) => {
@@ -38,23 +37,27 @@ export default function TemperaturaTableUI({ dataFetcherOutput }: TableUIProps) 
   });
 
   return (
-    <TableContainer 
-      component={Paper} 
-      sx={{ 
-        maxWidth: 600, 
-        margin: 'auto', 
-        mt: 4, 
-        bgcolor: '#121212', 
-        color: '#fff', 
-        borderRadius: 2,
-        boxShadow: 3,
+    <TableContainer
+      component={Paper}
+      sx={{
+        maxWidth: 600,
+        margin: 'auto',
+        mt: 4,
+        bgcolor: '#0f172a',
+        borderRadius: 3,
+        boxShadow: 4,
       }}
     >
-      <Table aria-label="tabla de temperaturas" sx={{ color: '#fff' }}>
+      <Table aria-label="tabla de temperaturas">
         <TableHead>
-          <TableRow sx={{ bgcolor: '#000' }}>
-            <TableCell sx={{ color: '#fff', fontWeight: 'bold' }}>Fecha</TableCell>
-            <TableCell sx={{ color: '#fff', fontWeight: 'bold' }} align="right">
+          <TableRow sx={{ bgcolor: '#2d2d2d' }}>
+            <TableCell sx={{ color: '#ffffffde', fontWeight: 'bold', fontSize: '1rem' }}>
+              Fecha
+            </TableCell>
+            <TableCell
+              align="right"
+              sx={{ color: '#ffffffde', fontWeight: 'bold', fontSize: '1rem' }}
+            >
               Temperatura (°C)
             </TableCell>
           </TableRow>
@@ -64,15 +67,23 @@ export default function TemperaturaTableUI({ dataFetcherOutput }: TableUIProps) 
             <TableRow
               key={fecha}
               sx={{
-                bgcolor: '#1e1e1e',
-                '&:nth-of-type(odd)': { bgcolor: '#2c2c2c' },
-                '&:hover': { bgcolor: '#3a3a3a' },
+                transition: 'background 0.3s',
+                '&:nth-of-type(odd)': { bgcolor: '#262626' },
+                '&:nth-of-type(even)': { bgcolor: '#1f1f1f' },
+                '&:hover': { bgcolor: '#333' },
               }}
             >
-              <TableCell component="th" scope="row" sx={{ color: '#fff' }}>
+              <TableCell
+                component="th"
+                scope="row"
+                sx={{ color: '#e0e0e0', borderBottom: '1px solid #444' }}
+              >
                 {fecha}
               </TableCell>
-              <TableCell align="right" sx={{ color: '#fff' }}>
+              <TableCell
+                align="right"
+                sx={{ color: '#e0e0e0', borderBottom: '1px solid #444' }}
+              >
                 {temperatura.toFixed(1)}
               </TableCell>
             </TableRow>

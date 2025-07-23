@@ -3,10 +3,10 @@ import Typography from '@mui/material/Typography';
 export default function HeaderUI() {
 return (
 <Typography
-variant="h2"
-component="h1"
+variant="h4"
+component="h3"
 sx={{fontWeight: 'bold'}}>
-Dashboard
+Dashboard del clima
 </Typography>
 )
 }
