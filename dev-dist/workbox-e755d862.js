@@ -1289,9 +1289,9 @@ define(['exports'], (function (exports) { 'use strict';
 
     function _extends() {
       return _extends = Object.assign ? Object.assign.bind() : function (n) {
-        for (var e = 1; e < arguments.length; e++) {
-          var t = arguments[e];
-          for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+        for (const e = 1; e < arguments.length; e++) {
+          const t = arguments[e];
+          for (const r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
         }
         return n;
       }, _extends.apply(null, arguments);
