@@ -774,7 +774,7 @@ define(['exports'], (function (exports) { 'use strict';
             event.waitUntil(requestPromises);
             // If a MessageChannel was used, reply to the message on success.
             if (event.ports && event.ports[0]) {
-              void requestPromises.then(() => event.ports[0].postMessage(true));
+              requestPromises.then(() => event.ports[0].postMessage(true));
             }
           }
         });
