@@ -2101,7 +2101,7 @@ define(['exports'], (function (exports) { 'use strict';
         const headerTime = parsedDate.getTime();
         // If the Date header was invalid for some reason, parsedDate.getTime()
         // will return NaN.
-        if (isNaN(headerTime)) {
+        if (Number.isNaN(headerTime)) {
           return null;
         }
         return headerTime;
