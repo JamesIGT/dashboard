@@ -27,7 +27,7 @@ define(['exports'], (function (exports) { 'use strict';
         groupEnd: null // No colored prefix on groupEnd
       };
       const print = function (method, args) {
-        if (self.__WB_DISABLE_DEV_LOGS) {
+        if (globalThis.__WB_DISABLE_DEV_LOGS) {
           return;
         }
         if (method === 'groupCollapsed') {
