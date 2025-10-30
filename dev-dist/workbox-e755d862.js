@@ -1289,7 +1289,7 @@ define(['exports'], (function (exports) { 'use strict';
 
     function _extends() {
       return _extends = Object.assign ? Object.assign.bind() : function (n) {
-        for (const e = 1; e < arguments.length; e++) {
+        for (let e = 1; e < arguments.length; e++) {
           const t = arguments[e];
           for (const r in t) ({}).Object.prototype.hasOwnProperty.call(t, r) && (n[r] = t[r]);
         }
