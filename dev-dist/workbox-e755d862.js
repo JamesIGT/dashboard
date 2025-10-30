@@ -1242,7 +1242,7 @@ define(['exports'], (function (exports) { 'use strict';
      **/
     function dontWaitFor(promise) {
       // Effective no-op.
-      void promise.then(() => {});
+      promise.then(() => {});
     }
 
     /*
